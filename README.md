@@ -1,2 +1,2 @@
 # Curso-VueJs
-Coder VueJS - Construindo Aplicações com VueJS
+COD3R VueJS - Construindo Aplicações com VueJS
