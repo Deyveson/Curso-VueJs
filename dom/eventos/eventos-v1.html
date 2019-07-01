@@ -1,0 +1,31 @@
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
+<div id="app">
+  <p>{{ contador }}</p>
+  <button v-on:click="somar">Somar 1</button>
+
+  <ol>
+    <li v-for="todo in todos">
+      {{ todo.text }}
+    </li>
+  </ol>
+</div>
+
+<script>
+  new Vue({
+    el: "#app",
+    data: {
+      contador: 0,
+      todos: [
+      { text: 'Aprenda JavaScript' },
+      { text: 'Aprenda Vue' },
+      { text: 'Construa algo incrível' }
+    ]
+    },
+    methods: {
+        somar(){
+            this.contador++
+        }
+    },
+  });
+</script>
