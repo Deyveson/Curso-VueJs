@@ -19,5 +19,13 @@
         <input type="text" v-on:keyup.enter="valor = $event.target.value">
         <p>{{ valor }}</p>
     </div>
+
+    <hr>
+
+    <div>
+        <input type="text" v-on:keyup.enter="alterarValor">
+        <p>{{ valor }}</p>
+    </div>
+
 </div>
 <script src="app.js"></script>
