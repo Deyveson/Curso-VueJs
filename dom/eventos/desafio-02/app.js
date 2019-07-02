@@ -7,8 +7,8 @@ new Vue({
     exibirAlerta() {
       alert("Estou Alertando");
     },
-    alterarValor(e){
-        this.valor = e.target.value 
+    alterarValor(e) {
+      this.valor = e.target.value;
     }
   }
 });
