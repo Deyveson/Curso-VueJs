@@ -1,0 +1,48 @@
+<script src="https://unpkg.com/vue"></script>
+
+<div id="app">
+  <button v-on:click="aumentar">Aumentar</button>
+  <button v-on:click="contado2++">Aumentar 2</button>
+  <button v-on:click="diminuir">Diminuir</button>
+  <p>Contador: {{ contador }} - {{ contado2 }}</p>
+  <p>Resultado: {{ resultado }}</p>
+</div>
+
+<script>
+  new Vue({
+    el: "#app",
+    data: {
+      contador: 0,
+      contado2: 0
+    },
+    computed: {
+      resultado() {
+        return this.contador >= 5 ? "Maior ou igual a 5" : "Menor que 5";
+      }
+      // quando trabalha-se com computed, não precisa chamar como
+      // função no template, chama como se fosse uma variavel normal.
+      // computed e uma propriedade sicrona - obrigatoriamente vc tem que retorna o valor
+    },
+    watch: {
+      contador(novo, antigo) {
+        setTimeout(() => {
+          this.contador = 0;
+        }, 2000);
+      }
+      // monitora as alterações de alguma propriedade
+      // monitorando o "contador"
+    },
+    methods: {
+      aumentar() {
+        this.contador++;
+      },
+      diminuir() {
+        this.contador--;
+      }
+      //   resultado() {
+      //     console.log("Método resultado e chamado...");
+      //     return this.contador >= 5 ? "Maior ou igual a 5" : "Menor que 5";
+      //   }
+    }
+  });
+</script>
