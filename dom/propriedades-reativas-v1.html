@@ -1,0 +1,27 @@
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
+<div id="app">
+  <p>{{ titulo }}</p>
+  <input
+    type="text"
+    v-bind:value="titulo"
+    v-on:input="titulo = $event.target.value"
+  />
+  <!-- Usando o v-bind e v-on -->
+  <!-- v-bind, do JavaScritp para o template (html) -->
+  <!-- v-on, pega um evento do template passa para o JavaScript -->
+
+  <hr />
+  <input type="text" v-model="titulo" />
+  <!-- Two-Way-Binding = Duas formas de Fazer  -->
+  <!-- Usando v-model, atualiza o dado que ta na instacia do Vue, gera impacto e atualiza o template -->
+</div>
+
+<script>
+  new Vue({
+    el: "#app",
+    data: {
+      titulo: "Usando VueJS!"
+    }
+  });
+</script>

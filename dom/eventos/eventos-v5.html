@@ -12,8 +12,8 @@
     <span v-on:mousemove.stop.prevent="">Parar Aqui!!!!</span>
   </p>
   <a v-on:click="naoNavegar" href="http://google.com">Google</a>
-  <hr>
-  <input type="text" v-on:keyup.enter="exibirAlerta">
+  <hr />
+  <input type="text" v-on:keyup.enter="exibirAlerta" />
 </div>
 
 <script>
@@ -36,11 +36,11 @@
         e.stopPropagation();
       },
       naoNavegar(event) {
-        console.log('não Navegar')
+        console.log("não Navegar");
         event.preventDefault();
       },
-      exibirAlerta(){
-        alert('Estou Alertando')
+      exibirAlerta() {
+        alert("Estou Alertando");
       }
     }
   });
